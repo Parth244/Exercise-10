@@ -7,31 +7,26 @@ function problem_10() {
     var a = parseInt(prompt("Please enter a number: ", "number"));
       
        
-       outputObj.innerHTML="number: "+a+"<br><br>number of 7's: ";
+    outputObj.innerHTML="number: "+a+"<br><br>number of 7's: ";
       
-       var d;
-    var n=a;
+    var d;
+    var n = a;
     
     var counter = 0;
     
    
-    if(n <= 0)
-    {
-        
-    a = "num > 0";
+    if(n <= 0){
+      a = "num > 0";
     }
-    else
-    {
-          
-    while(n>0) //using while loop
-    {
-    d=n%10
+
+    else{
+      
+      while(n>0){ //using while loop
+        d = n % 10;
     
-    if(d === 7)
-    counter++;
-              
-               
-    n=Math.floor(n/10);
+        if(d === 7)
+          counter++;
+          n = Math.floor(n/10);
     }
     }
     outputObj.innerHTML=outputObj.innerHTML+counter;
